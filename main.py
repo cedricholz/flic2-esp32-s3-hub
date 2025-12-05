@@ -43,7 +43,7 @@ async def main():
 
         tasks.append(
             asyncio.create_task(
-                run_with_shutdown_check(bluetooth_service, "bluetooth")
+                run_with_shutdown_check()
             )
         )
         tasks.append(asyncio.create_task(shutdown_monitor()))
