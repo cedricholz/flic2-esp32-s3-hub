@@ -1,0 +1,29 @@
+[project]
+name = "flic2-esp32-s3-hub"
+version = "0.1.0"
+description = "Self-hosted Flic 2 button hub using ESP32-S3 microcontrollers"
+authors = [
+    { name = "Cedric Holz", email = "cedricholz@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32.3,<3.0.0",
+    "aiohttp>=3.12.6,<4.0.0",
+    "python-dotenv>=1.1.0,<2.0.0",
+    "colorlog>=6.9.0,<7.0.0",
+    "zeroconf>=0.147.0,<0.148.0",
+    "pyserial>=3.5,<4.0",
+    "esptool>=5.0.2,<6.0.0",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.0"
+
+[tool.poetry]
+package-mode = false
