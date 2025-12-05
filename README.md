@@ -176,6 +176,16 @@ idf.py build
 
 The compiled firmware will be in `firmware/esp32-flic-project/build/`.
 
+If you clone this repo and accidentally delete the build files, you'll have to re-add them to git:
+```bash
+git add -f firmware/esp32-flic-project/build/bootloader/bootloader.bin
+git add -f firmware/esp32-flic-project/build/bootloader/bootloader.bin
+git add -f firmware/esp32-flic-project/build/esp32-flic.bin
+git add -f firmware/esp32-flic-project/build/firmware_version.json
+git add -f firmware/esp32-flic-project/build/flasher_args.json
+git add -f firmware/esp32-flic-project/build/partition_table/partition-table.bin
+```
+
 ### Monitoring ESP32 Logs
 Stop the service, plug in the ESP32 via USB so it doesn't re-flash, start the server, then run:
 ```bash
